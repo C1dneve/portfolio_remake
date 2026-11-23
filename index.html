@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cid D’Oliveira | Portfólio Acadêmico — DSM Fatec SJC</title>
+  <meta name="description" content="Portfólio acadêmico de Cid Daniel Neves D’Oliveira — estudante de Desenvolvimento de Software Multiplataforma na Fatec São José dos Campos." />
+  <link rel="icon" type="image/png" href="assets/img/icon.png" />
+
+  <meta property="og:title" content="Cid D’Oliveira — Portfólio Acadêmico" />
+  <meta property="og:description" content="Estudante de DSM na Fatec SJC. Projetos acadêmicos (API), profissionais e pessoais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://c1dneve.github.io/Portf-lio/" />
+  <meta property="og:image" content="https://c1dneve.github.io/Portf-lio/assets/img/foto-perfil.jpeg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { destaque:'#F2AF29', fundo1:'#000000', fundo2:'#0f0f0f', fundo3:'#161616' },
+      fontFamily: { sans:['Inter','system-ui','sans-serif'], mono:['JetBrains Mono','monospace'] }
+    } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-fundo1 text-gray-200 font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-fundo1/80 backdrop-blur-md" aria-label="Navegação principal">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
+      <a href="#inicio" class="font-mono text-destaque font-medium tracking-tight text-sm">cid<span class="text-gray-500">.</span>dev</a>
+      <div id="desktop-nav" class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+        <a href="#sobre" class="nav-link hover:text-white">Sobre</a>
+        <a href="#projetos" class="nav-link hover:text-white">Projetos</a>
+        <a href="#curriculo" class="nav-link hover:text-white">Currículo</a>
+        <a href="#habilidades" class="nav-link hover:text-white">Habilidades</a>
+        <a href="#contato" class="nav-link hover:text-white">Contato</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" class="flex flex-col gap-1.5 p-1.5 text-gray-400 hover:text-white transition-colors">
+          <span class="block w-5 h-px bg-current transition-all" id="hb1"></span>
+          <span class="block w-5 h-px bg-current transition-all" id="hb2"></span>
+          <span class="block w-5 h-px bg-current transition-all" id="hb3"></span>
+        </button>
+        <a href="#contato" class="btn-primary bg-destaque text-fundo1 text-sm font-semibold px-4 py-1.5 rounded">Contato</a>
+      </div>
+    </div>
+    <div id="mobile-menu" role="navigation" aria-label="Menu mobile">
+      <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#curriculo">Currículo</a><a href="#habilidades">Habilidades</a><a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <!-- 1. APRESENTAÇÃO PESSOAL -->
+  <header id="inicio" class="min-h-screen flex items-center pt-14">
+    <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 md:gap-16 items-center py-20">
+      <div class="order-2 md:order-1">
+        <p class="section-eyebrow mb-4">Disponível para estágio</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 tracking-tight">
+          Olá, eu sou<br /><span class="text-destaque">Cid Daniel Neves D’Oliveira</span>
+        </h1>
+        <h2 class="text-lg text-gray-400 mb-4 font-medium">Estudante de Desenvolvimento de Software Multiplataforma — Fatec São José dos Campos</h2>
+        <p class="text-gray-500 mb-8 leading-relaxed max-w-md">
+          Já entreguei um site real para cliente, participei de dois projetos integradores (API) com parceiros reais e busco meu primeiro estágio em tecnologia.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <a href="#projetos" class="btn-primary bg-destaque text-fundo1 font-semibold px-6 py-2.5 rounded text-sm">Ver projetos</a>
+          <a href="#contato" class="btn-outline border border-destaque text-destaque font-semibold px-6 py-2.5 rounded text-sm">Entrar em contato</a>
+        </div>
+        <div class="flex items-center gap-5 text-sm">
+          <a href="https://github.com/C1dneve" target="_blank" rel="noopener" class="text-gray-500 hover:text-destaque transition-colors">GitHub</a>
+          <span class="text-gray-700">·</span>
+          <a href="https://br.linkedin.com/in/cid-doliveira" target="_blank" rel="noopener" class="text-gray-500 hover:text-destaque transition-colors">LinkedIn</a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center">
+        <div class="relative">
+          <img src="assets/img/foto-perfil.jpeg" alt="Foto de Cid Daniel Neves D’Oliveira" class="w-52 h-64 md:w-64 md:h-80 rounded-2xl border border-white/10 object-cover" style="object-position:center 20%" />
+          <div class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-destaque/40 rounded-tr-sm"></div>
+          <div class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-destaque/40 rounded-bl-sm"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOBRE: formação atual, objetivos, áreas de interesse -->
+  <section id="sobre" class="py-24 bg-fundo2">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-eyebrow mb-3">Sobre mim</p>
+      <h2 class="text-3xl font-bold mb-10 text-white">Desenvolvedor com visão além do código</h2>
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-8">
+        <div class="space-y-4">
+          <p class="text-gray-400 leading-relaxed">Estudo Desenvolvimento de Software Multiplataforma na Fatec Jessen Vidal e já entreguei um site funcional para um cliente real, do briefing ao deploy. Minha experiência administrativa me deu visão de negócio e capacidade de entender o que o cliente realmente precisa.</p>
+          <p><span class="lbl block">Formação atual</span><span class="txt">Tecnólogo em Desenvolvimento de Software Multiplataforma — Fatec São José dos Campos (2026 – atual)</span></p>
+        </div>
+        <div class="space-y-5">
+          <div>
+            <p class="lbl">Objetivos acadêmicos</p>
+            <ul class="txt lst"><li>Concluir o tecnólogo em DSM consolidando bases de back-end, front-end e banco de dados.</li><li>Aprofundar desenvolvimento full stack e análise de dados.</li></ul>
+          </div>
+          <div>
+            <p class="lbl">Objetivos profissionais</p>
+            <ul class="txt lst"><li>Conquistar o primeiro estágio em desenvolvimento de software.</li><li>Evoluir para desenvolvedor full stack atuando em soluções web e APIs.</li></ul>
+          </div>
+          <div>
+            <p class="lbl">Áreas de interesse</p>
+            <div class="flex flex-wrap gap-2"><span class="tag-tech">Desenvolvimento web</span><span class="tag-tech">Front-end</span><span class="tag-tech">APIs REST</span><span class="tag-tech">Dados &amp; SQL</span><span class="tag-tech">Automação</span><span class="tag-tech">Inteligência Artificial</span><span class="tag-tech">Hardware</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROJETOS -->
+  <section id="projetos" class="py-24 bg-fundo1">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-eyebrow mb-3">Projetos</p>
+      <h2 class="text-3xl font-bold mb-14 text-white">O que eu construí</h2>
+
+      <!-- 2.2.1 ACADÊMICOS -->
+      <h3 class="sub"><small>2.1</small>Projetos Acadêmicos (API)</h3>
+      <div class="space-y-8 mb-20">
+
+        <!-- API 1 — Radar Cidadão -->
+        <article class="card-project bg-fundo3 border border-white/10 rounded-xl p-6 md:p-8">
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h4 class="text-xl font-semibold text-white">Radar Cidadão</h4>
+            <span class="badge-client">API 1 · 2026/1</span>
+          </div>
+          <p class="text-sm text-gray-500 font-mono mb-7">Parceiro: Prof. Fernando Masanori Ashikaga (Fatec SJC) · Mar – Mai 2026 · Equipe Lumina · Dev Team</p>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-5">
+              <div><p class="lbl">Problema resolvido</p><p class="txt">Em ano de eleição para Deputado Federal, eleitores, professores e jornalistas precisam avaliar o desempenho de deputados candidatos à reeleição e compará-lo à média nacional. Os dados de presença, gastos e atividades são públicos, mas técnicos, dispersos e difíceis de interpretar, o que dificulta decisões de voto e o ensino de cidadania com base em fatos neutros.</p></div>
+              <div><p class="lbl">Solução desenvolvida</p><p class="txt">Aplicação web que consome a API pública de dados abertos da Câmara dos Deputados e traduz os dados em informação clara: página de deputados com fotos, busca por nome e filtro por estado; gráficos de gastos e presença com legendas explicativas; palavras-chave mais frequentes nos discursos; resumo em linguagem simples com nota de desempenho; indicação das fontes; tabelas roláveis no celular e página de erro para deputado inexistente.</p></div>
+              <div><p class="lbl">Contribuições pessoais</p>
+                <!-- REVISAR: ajuste para refletir exatamente o que você fez -->
+                <ul class="txt lst"><li>Desenvolvedor da equipe nas três sprints, implementando e integrando funcionalidades do backlog.</li><li>Participação nas cerimônias Scrum e nas validações de entrega com o parceiro.</li><li>Versionamento com branches e padrão de commits.</li></ul></div>
+            </div>
+            <div class="space-y-5">
+              <div><p class="lbl">Tecnologias utilizadas</p>
+                <div class="flex flex-wrap gap-2"><span class="tag-tech">Python</span><span class="tag-tech">Flask</span><span class="tag-tech">MariaDB</span><span class="tag-tech">Docker</span><span class="tag-tech">HTML5</span><span class="tag-tech">CSS3</span><span class="tag-tech">JavaScript</span><span class="tag-tech">Tailwind CSS</span><span class="tag-tech">Google Colab</span><span class="tag-tech">Figma</span><span class="tag-tech">Jira</span></div></div>
+              <div><p class="lbl">Hard skills adquiridas</p>
+                <ul class="txt lst"><li>Desenvolvimento web com Python e Flask.</li><li>Consumo e tratamento de API REST pública.</li><li>Banco de dados relacional (MariaDB).</li><li>Análise exploratória de dados em notebooks.</li><li>Containerização com Docker e Docker Compose.</li><li>Prototipação de interfaces no Figma.</li></ul></div>
+              <div><p class="lbl">Soft skills exercitadas</p>
+                <ul class="txt lst"><li>Trabalho em equipe em um grupo de 9 pessoas.</li><li>Comunicação com cliente real e tradução de requisitos.</li><li>Organização por prazos de sprint (Scrum).</li><li>Comunicar dados complexos a públicos não técnicos.</li></ul></div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <!-- Faça um fork do repositório original para a sua conta (mesmo nome) para este link funcionar -->
+                <a href="https://github.com/C1dneve/API1_DSM_Lumina" target="_blank" rel="noopener" class="link-btn">código no GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- API 2 — SGOS -->
+        <article class="card-project bg-fundo3 border border-white/10 rounded-xl p-6 md:p-8">
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h4 class="text-xl font-semibold text-white">SGOS — Sistema de Gestão de Ordens de Serviço</h4>
+            <span class="badge-client">API 2 · 2026/2</span>
+          </div>
+          <p class="text-sm text-gray-500 font-mono mb-7">Parceiro: ALTAVE · Set – Nov 2026 · Equipe GesTec · Scrum Master</p>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-5">
+              <div><p class="lbl">Problema resolvido</p><p class="txt">A ALTAVE precisava monitorar, organizar e controlar o atendimento de solicitações operacionais e projetos de implantação que eram acompanhados de forma descentralizada, sem padronização das etapas entre departamentos e sem previsibilidade sobre os prazos de SLA contratual, o que gerava gargalos e dificultava a rastreabilidade do que foi feito, por quem e quando.</p></div>
+              <div><p class="lbl">Solução desenvolvida</p><p class="txt">Sistema web com autenticação por perfil (Gestor, Analista e Técnico), projetos como agrupadores centrais de ordens de serviço por departamento, controle rígido de status com parecer técnico, cálculo automático de SLA com alertas de risco, anexos de até 50 MB, notificações in-app e por e-mail, registro de horas, relatórios em PDF, logs de auditoria e documentação interativa da API via Swagger.</p></div>
+              <div><p class="lbl">Contribuições pessoais</p>
+                <!-- REVISAR: ajuste para refletir exatamente o que você fez -->
+                <ul class="txt lst"><li>Scrum Master: facilitação das cerimônias, acompanhamento das sprints e remoção de impedimentos.</li><li>Apoio à organização do backlog e à documentação de cada sprint.</li><li>Alinhamento do time com o Product Owner e o parceiro.</li></ul></div>
+            </div>
+            <div class="space-y-5">
+              <div><p class="lbl">Tecnologias utilizadas</p>
+                <div class="flex flex-wrap gap-2"><span class="tag-tech">React</span><span class="tag-tech">TypeScript</span><span class="tag-tech">Node.js</span><span class="tag-tech">Express</span><span class="tag-tech">PostgreSQL</span><span class="tag-tech">Supabase</span><span class="tag-tech">Prisma ORM</span><span class="tag-tech">JWT</span><span class="tag-tech">bcrypt</span><span class="tag-tech">Swagger / OpenAPI</span><span class="tag-tech">Cucumber (BDD)</span></div></div>
+              <div><p class="lbl">Hard skills adquiridas</p>
+                <ul class="txt lst"><li>API REST em Node.js/TypeScript com arquitetura em camadas (controllers, services, repositories).</li><li>Modelagem e migrations com Prisma e PostgreSQL.</li><li>Autenticação e controle de acesso com JWT.</li><li>Testes de comportamento (BDD) com Cucumber.</li><li>Documentação de API com OpenAPI 3.0.</li><li>Fluxo de trabalho Git com branches, DoR/DoD e padrão de commits.</li></ul></div>
+              <div><p class="lbl">Soft skills exercitadas</p>
+                <ul class="txt lst"><li>Liderança facilitadora e condução de cerimônias ágeis.</li><li>Comunicação com parceiro e equipe de 8 pessoas.</li><li>Gestão de tempo, prazos e prioridades.</li><li>Mediação de conflitos e colaboração.</li></ul></div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <!-- Faça um fork do repositório original para a sua conta (mesmo nome) para este link funcionar -->
+                <a href="https://github.com/C1dneve/sistema-ordens-servico" target="_blank" rel="noopener" class="link-btn">código no GitHub ↗</a>
+                <a href="https://www.youtube.com/watch?v=vnbYhxT90lo" target="_blank" rel="noopener" class="link-btn">demo Sprint 1 ↗</a>
+                <a href="https://youtu.be/4kNHCjK8SPg" target="_blank" rel="noopener" class="link-btn">demo Sprint 2 ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 2.2.2 PROFISSIONAIS -->
+      <h3 class="sub"><small>2.2</small>Projetos Profissionais</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-20">
+        <article class="card-project bg-fundo3 border border-white/10 rounded-xl flex flex-col">
+          <figure class="card-media rounded-t-xl m-0">
+            <video src="assets/video/Cfo-demo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração do site Instituto Logos CFO"></video>
+          </figure>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-center gap-2 flex-wrap"><h4 class="text-lg font-semibold text-white">Instituto Logos CFO</h4><span class="badge-client">Cliente real</span></div>
+              <a href="https://icui.com.br" target="_blank" rel="noopener" class="link-btn shrink-0">site ↗</a>
+            </div>
+            <p class="text-xs text-gray-500 font-mono">Freelance · 2024</p>
+            <div><p class="lbl">Problema</p><p class="txt">Uma instituição religiosa precisava oferecer cursos online, receber inscrições e contatos e vender o acesso de forma organizada, sem depender de ferramentas improvisadas.</p></div>
+            <div><p class="lbl">Solução e responsabilidades</p>
+              <ul class="txt lst"><li>Briefing com o cliente para levantar necessidades.</li><li>Layout responsivo com HTML, CSS, Bootstrap 4 e JavaScript.</li><li>Carrinho e formulário de contato com backend em PHP.</li><li>Deploy na Hostgator, configuração de domínio e ajustes pós-entrega.</li></ul></div>
+            <div class="flex flex-wrap gap-2 mt-auto"><span class="tag-tech">HTML5</span><span class="tag-tech">CSS3</span><span class="tag-tech">Bootstrap 4</span><span class="tag-tech">JavaScript</span><span class="tag-tech">PHP</span><span class="tag-tech">jQuery</span></div>
+          </div>
+        </article>
+
+        <article class="card-project bg-fundo3 border border-white/10 rounded-xl p-6 flex flex-col gap-4">
+          <h4 class="text-lg font-semibold text-white">Assistente Administrativo</h4>
+          <p class="text-xs text-gray-500 font-mono">Secretaria de Manutenção Municipal · 2025 – 2026</p>
+          <div><p class="lbl">Atividades</p><p class="txt">Organização de processos, comunicação com a equipe e atendimento em ambiente profissional, acompanhando demandas de manutenção e trabalhando sob demanda.</p></div>
+          <div><p class="lbl">Competências desenvolvidas</p><ul class="txt lst"><li>Responsabilidade e proatividade.</li><li>Visão de processos e de atendimento ao usuário.</li></ul></div>
+          <div class="flex flex-wrap gap-2 mt-auto"><span class="tag-tech">Gestão de processos</span><span class="tag-tech">Comunicação profissional</span></div>
+        </article>
+      </div>
+
+      <!-- 2.2.3 PESSOAIS -->
+      <h3 class="sub"><small>2.3</small>Projetos Pessoais</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="card-project bg-fundo3 border border-white/10 rounded-xl flex flex-col">
+          <figure class="card-media rounded-t-xl m-0">
+            <video src="assets/video/daily-muse-demo.mp4" poster="assets/img/daily-muse.png" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração do projeto Daily Muse"></video>
+          </figure>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-start justify-between gap-3"><h4 class="text-lg font-semibold text-white">Daily Muse</h4>
+              <div class="flex gap-2 shrink-0"><a href="https://c1dneve.github.io/daily-muse/" target="_blank" rel="noopener" class="link-btn">demo ↗</a><a href="https://github.com/C1dneve/daily-muse" target="_blank" rel="noopener" class="link-btn">código ↗</a></div></div>
+            <p class="txt">App web que gera palavras e frases aleatórias para inspiração diária, com integração de IA. Exercitou consumo de API e lógica interativa no front-end.</p>
+            <div class="flex flex-wrap gap-2 mt-auto"><span class="tag-tech">HTML5</span><span class="tag-tech">CSS3</span><span class="tag-tech">JavaScript</span><span class="tag-tech">AI API</span></div>
+          </div>
+        </article>
+
+        <article class="card-project bg-fundo3 border border-white/10 rounded-xl flex flex-col">
+          <figure class="card-media rounded-t-xl m-0">
+            <video src="assets/video/neva-demo.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração do projeto Neva University"></video>
+          </figure>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-start justify-between gap-3"><h4 class="text-lg font-semibold text-white">Neva University</h4>
+              <div class="flex gap-2 shrink-0"><a href="https://fatec-dsm-12a6.vercel.app/" target="_blank" rel="noopener" class="link-btn">demo ↗</a><a href="https://github.com/C1dneve/FatecDsm" target="_blank" rel="noopener" class="link-btn">código ↗</a></div></div>
+            <p class="txt">Landing page completa para uma universidade fictícia, consolidando HTML semântico e Tailwind CSS com foco em responsividade e acessibilidade.</p>
+            <div class="flex flex-wrap gap-2 mt-auto"><span class="tag-tech">HTML5</span><span class="tag-tech">Tailwind CSS</span><span class="tag-tech">Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="md:col-span-2 border border-white/10 rounded-xl p-6 bg-fundo2/60">
+          <div class="flex items-center gap-3 mb-3"><span class="badge-wip"><span class="pulse-dot" aria-hidden="true"></span>Em desenvolvimento</span></div>
+          <h4 class="text-lg font-semibold text-white mb-2">Smart Price Tracker</h4>
+          <p class="txt mb-4">Rastreador de preços com scraping de e-commerces, armazenamento em banco de dados e alertas automáticos. Projeto de dados que une Python, SQL e automação.</p>
+          <div class="flex flex-wrap gap-2 items-center"><span class="tag-tech">Python</span><span class="tag-tech">SQL</span><span class="tag-tech">Playwright</span><span class="tag-tech">Automação</span>
+            <a href="https://github.com/C1dneve" target="_blank" rel="noopener" class="link-btn ml-auto">acompanhe no GitHub →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. INFORMAÇÕES CURRICULARES -->
+  <section id="curriculo" class="py-24 bg-fundo2">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-eyebrow mb-3">Informações curriculares</p>
+      <h2 class="text-3xl font-bold mb-14 text-white">Formação e eventos</h2>
+
+      <h3 class="sub"><small>3.1</small>Formação acadêmica</h3>
+      <div class="space-y-10 mb-16">
+        <div class="relative pl-6">
+          <div class="exp-line"></div>
+          <div class="absolute left-[-5px] top-[5px] w-2.5 h-2.5 rounded-full bg-destaque border-2 border-fundo2"></div>
+          <div class="flex flex-wrap items-start gap-3 mb-2"><h4 class="text-lg font-semibold text-white">Desenvolvimento de Software Multiplataforma</h4><span class="badge-wip"><span class="pulse-dot" aria-hidden="true"></span>Cursando</span></div>
+          <p class="text-sm text-gray-500 font-mono mb-3">Fatec Jessen Vidal · São José dos Campos · 2026 – atual</p>
+          <p class="txt max-w-xl">Tecnólogo com foco em desenvolvimento web, banco de dados e automação, com projetos integradores (API) semestrais desenvolvidos com parceiros reais sob metodologia Scrum.</p>
+        </div>
+        <div class="relative pl-6">
+          <div class="absolute left-[-5px] top-[5px] w-2.5 h-2.5 rounded-full bg-gray-600 border-2 border-fundo2"></div>
+          <h4 class="text-lg font-semibold text-white mb-1">Técnico em Desenvolvimento de Sistemas</h4>
+          <p class="text-sm text-gray-500 font-mono mb-3">2024 – 2025 · Concluído</p>
+          <p class="txt max-w-xl">Lógica de programação, estruturas de dados, banco de dados relacional e desenvolvimento web.</p>
+        </div>
+      </div>
+
+      <h3 class="sub"><small>3.2</small>Participações em eventos</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        <article class="card-project event-card p-0 overflow-hidden flex flex-col">
+          <figure class="card-media m-0" style="aspect-ratio:4/3"><img src="assets/img/maratona.jpeg" alt="Equipe na Maratona entre Fatecs 2026" loading="lazy" /></figure>
+          <div class="p-5 flex flex-col gap-3 flex-1">
+            <div class="flex items-start justify-between gap-4">
+              <div><span class="event-type">Competição · Maratona de programação</span><h4 class="text-base font-semibold text-white mt-1">Maratona entre Fatecs</h4></div>
+              <span class="text-xs font-mono text-gray-500 shrink-0 mt-1">2026</span>
+            </div>
+            <p class="txt">Competição de lógica e programação entre alunos de diferentes unidades da Fatec. Meu grupo acertou 1 de 8 problemas — e a premiação foi uma bexiga. Exercitou resolução de problemas sob pressão e trabalho em equipe.</p>
+            <div class="flex flex-wrap gap-2 mt-auto"><span class="tag-tech">Algoritmos</span><span class="tag-tech">Trabalho em equipe</span></div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="sub"><small>3.3</small>Certificações e cursos</h3>
+      <!-- Para adicionar um certificado, copie o bloco abaixo e cole dentro do div:
+      <div class="event-card"><span class="event-type">Certificação · Plataforma</span>
+        <h4 class="text-base font-semibold text-white mt-1">Nome do curso</h4>
+        <p class="text-xs font-mono text-gray-500 mt-1">Instituição · Ano · <a href="LINK" class="text-destaque">ver certificado ↗</a></p></div>
+      -->
+      <div class="grid md:grid-cols-2 gap-4"><p class="txt">Certificações e cursos complementares serão listados aqui conforme forem concluídos.</p></div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="py-24 bg-fundo1">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="section-eyebrow mb-3">Habilidades</p>
+      <h2 class="text-3xl font-bold mb-3 text-white">Tecnologias &amp; ferramentas</h2>
+      <p class="txt mb-12 max-w-2xl">Nível de 1 a 5: <b class="text-gray-300">1</b> ouvi falar · <b class="text-gray-300">2</b> utilizador básico · <b class="text-gray-300">3</b> desenvolvedor autônomo · <b class="text-gray-300">4</b> avançado · <b class="text-gray-300">5</b> fluente.</p>
+      <div class="grid md:grid-cols-3 gap-x-12 gap-y-10">
+        <div><p class="lbl mb-2">Front-end</p>
+          <div class="skill-row">HTML5<span class="stars" role="img" aria-label="4 de 5">★★★★<i>★</i></span></div>
+          <div class="skill-row">CSS3<span class="stars" role="img" aria-label="4 de 5">★★★★<i>★</i></span></div>
+          <div class="skill-row">Tailwind CSS<span class="stars" role="img" aria-label="4 de 5">★★★★<i>★</i></span></div>
+          <div class="skill-row">Bootstrap<span class="stars" role="img" aria-label="4 de 5">★★★★<i>★</i></span></div>
+          <div class="skill-row">JavaScript<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+          <div class="skill-row">React / TypeScript<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+        </div>
+        <div><p class="lbl mb-2">Back-end &amp; dados</p>
+          <div class="skill-row">Python<span class="stars" role="img" aria-label="3 de 5">★★★<i>★★</i></span></div>
+          <div class="skill-row">SQL<span class="stars" role="img" aria-label="3 de 5">★★★<i>★★</i></span></div>
+          <div class="skill-row">PHP<span class="stars" role="img" aria-label="3 de 5">★★★<i>★★</i></span></div>
+          <div class="skill-row">Flask<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+          <div class="skill-row">Node.js / Express<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+          <div class="skill-row">PostgreSQL / Prisma<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+        </div>
+        <div><p class="lbl mb-2">Ferramentas &amp; métodos</p>
+          <div class="skill-row">Git &amp; GitHub<span class="stars" role="img" aria-label="3 de 5">★★★<i>★★</i></span></div>
+          <div class="skill-row">Scrum<span class="stars" role="img" aria-label="3 de 5">★★★<i>★★</i></span></div>
+          <div class="skill-row">Docker<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+          <div class="skill-row">Figma<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+          <div class="skill-row">Swagger / OpenAPI<span class="stars" role="img" aria-label="2 de 5">★★<i>★★★</i></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CONTATO -->
+  <footer id="contato" class="py-20 bg-fundo2 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="section-eyebrow mb-4">Contato</p>
+      <h2 class="text-3xl font-bold text-white mb-3">Vamos conversar?</h2>
+      <p class="text-gray-500 mb-10 max-w-md mx-auto leading-relaxed">Aberto a oportunidades de estágio, projetos freelance e networking em tecnologia.</p>
+      <div class="flex flex-wrap justify-center gap-3 mb-14">
+        <a href="mailto:nevescidaniel@gmail.com" class="btn-outline border border-destaque text-destaque font-semibold py-2.5 px-6 rounded text-sm">nevescidaniel@gmail.com</a>
+        <a href="https://br.linkedin.com/in/cid-doliveira" target="_blank" rel="noopener" class="btn-outline border border-white/15 text-gray-400 font-semibold py-2.5 px-6 rounded text-sm">LinkedIn</a>
+        <a href="https://github.com/C1dneve" target="_blank" rel="noopener" class="btn-outline border border-white/15 text-gray-400 font-semibold py-2.5 px-6 rounded text-sm">GitHub</a>
+      </div>
+      <p class="text-xs text-gray-600 font-mono">&copy; 2026 Cid Daniel Neves D’Oliveira · Fatec São José dos Campos · HTML &amp; Tailwind CSS</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
