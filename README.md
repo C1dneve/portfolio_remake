@@ -1,43 +1,53 @@
-# Portfólio Cid
+# Portfólio Acadêmico — Cid Daniel Neves D’Oliveira
 
-Este é o repositório do meu portfólio pessoal, desenvolvido como uma **Single Page Application (SPA)** estática. O objetivo deste projeto é centralizar minha trajetória acadêmica na **Fatec Jessen Vidal**, meus projetos principais e minhas habilidades técnicas de forma limpa e moderna.
+Portfólio acadêmico e profissional desenvolvido para apresentar minha formação em Desenvolvimento de Software Multiplataforma (DSM) na Fatec São José dos Campos, meus projetos e minhas competências. Os projetos pessoais estão vinculados à minha conta GitHub; os projetos integradores (API) apontam para os repositórios das organizações das equipes.
 
-![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-F2AF29?style=for-the-badge)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+**Publicado em:** https://c1dneve.github.io/Portf-lio/
 
----
+## Seções
 
-## Identidade Visual
+- **Apresentação:** perfil, formação atual, objetivos e áreas de interesse.
+- **Projetos acadêmicos (API):** Radar Cidadão (atividade de treinamento acadêmico orientada por professor) e SGOS (projeto desenvolvido com a parceira ALTAVE), com contexto, tecnologias, solução, contribuições e habilidades exercitadas. Os links direcionam aos repositórios das respectivas equipes.
+- **Projetos profissionais:** trabalho freelance para cliente real e experiência como Assistente Administrativo na Secretaria de Manutenção Municipal, pelo Programa Agente Cidadão (Fundhas), durante seis meses, até março de 2026.
+- **Projetos pessoais:** aplicações desenvolvidas por iniciativa própria.
+- **Informações curriculares:** formação acadêmica, eventos, cursos e certificações.
+- **Habilidades:** tecnologias, ferramentas e métodos com uma escala de proficiência de 1 a 5.
+- **Contato:** GitHub, LinkedIn e e-mail.
 
-O design foi concebido com foco em um contraste sofisticado e alta legibilidade, utilizando as cores:
-* **Destaque:** `#F2AF29` (Amarelo Ouro)
-* **Fundo:** `#000000` (Preto Absoluto) e `#121212` (Cinza Escuro)
+## Tecnologias utilizadas
 
-O layout conta com um gradiente linear dinâmico na seção de boas-vindas (*Hero Section*), criando um impacto visual imediato para o visitante.
+- **HTML5:** estrutura e conteúdo semântico.
+- **Tailwind CSS (CDN):** classes utilitárias para composição responsiva do layout.
+- **CSS3:** estilos complementares em `assets/css/style.css`.
+- **JavaScript:** interações do menu de navegação, implementadas em `assets/js/main.js`.
+- **Google Fonts:** tipografias Inter e JetBrains Mono.
 
-## Tecnologias Utilizadas
+O site é estático e não exige etapa de build ou instalação de dependências para ser visualizado localmente. O Tailwind CSS é carregado pela CDN, portanto a conexão com a internet é necessária para a estilização baseada no framework.
 
-Para este projeto, optei por uma abordagem focada em performance e fundamentos de desenvolvimento web:
+## Estrutura do projeto
 
-* **HTML5:** Estruturação semântica para melhor SEO e acessibilidade.
-* **Tailwind CSS:** Framework utilitário para estilização rápida, garantindo que o site seja **100% responsivo** (adaptável a celulares, tablets e desktops).
-* **Design First:** Foco na experiência do usuário e interface limpa.
+```text
+.
+├── index.html
+├── .nojekyll
+├── README.md
+└── assets/
+    ├── css/style.css
+    ├── img/
+    ├── js/main.js
+    └── video/
+```
 
-> [!NOTE]
-> Este projeto foi desenvolvido sem o uso de JavaScript por opção técnica, priorizando a entrega de um layout fluido e otimizado apenas com CSS utilitário.
+## Visualização local
 
-## Seções do Portfólio
+Na pasta do projeto, execute:
 
-1.  **Home/Hero:** Introdução profissional com gradiente customizado.
-2.  **Sobre Mim:** Breve resumo da minha atuação como estudante de **DSM** e interesses em IA.
-3.  **Habilidades:** Grid técnico com as tecnologias que utilizo (Python, HTML, CSS, IA).
-4.  **Projetos:** Destaque para projetos como o **Neva University** e o assistente virtual **My Companion**.
-5.  **Contato:** Links diretos para LinkedIn, GitHub e E-mail.
+```bash
+python -m http.server 8000
+```
 
-## Como visualizar o projeto
+Depois, acesse `http://localhost:8000` no navegador.
 
-Como o projeto utiliza o Tailwind via CDN, você não precisa instalar dependências pesadas. 
+## Publicação
 
-1. Faça o clone do repositório:
-   ```bash
-   git clone [https://github.com/C1dneve/Portf-lio.git](https://github.com/C1dneve/Portf-lio.git)
+O projeto está preparado para publicação pelo GitHub Pages, servindo o `index.html` da raiz do repositório. O arquivo `.nojekyll` evita o processamento do conteúdo pelo Jekyll.
